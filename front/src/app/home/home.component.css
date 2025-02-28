@@ -1,0 +1,15 @@
+#sidebar nav ul {
+  display: flex;
+  gap: 30px; /* Adiciona um espaço entre os itens */
+  color: #fff;
+  
+}
+
+
+
+#sidebar {
+  background-color: #10991e;
+  padding: 20px;
+  width: 100%
+  /* Ajuste a largura conforme necessário */
+}
