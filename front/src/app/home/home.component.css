@@ -1,15 +1,107 @@
-#sidebar nav ul {
+/* Estilos para a barra de navegação */
+.nav-bar {
   display: flex;
-  gap: 30px; /* Adiciona um espaço entre os itens */
-  color: #fff;
-  
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header{
+  background-color: #0187a7
+
 }
 
+/* Estilos para a lista de navegação */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+}
 
+/* Estilos para os botões de Login e Dropdown */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre os elementos */
+}
+.nav-list ul{
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  list-style: none;
+}
+.nav-link {
+  color: #f1f1f1;
+  font-size: 1.15rem;
+  text-decoration:none;
+}
 
-#sidebar {
-  background-color: #10991e;
-  padding: 20px;
-  width: 100%
-  /* Ajuste a largura conforme necessário */
+/* Estilos para o botão do dropdown */
+.dropbtn {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para o conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar o dropdown quando a classe show está presente */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Estilos para o botão de Entrar */
+.login-button button {
+  border: none;
+  padding: 5px 15px;
+  background-color: #ffffff;
+  cursor: pointer;
+
+}
+.login-button button a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Estilos para o menu móvel */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+/* Estilos para o ícone do menu móvel */
+.mobile-menu-icon {
+  display: none;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nav-list, .nav-buttons {
+      display: none;
+  }
+
+  .mobile-menu-icon {
+      display: block;
+  }
 }

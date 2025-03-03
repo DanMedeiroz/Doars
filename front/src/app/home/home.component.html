@@ -1,27 +1,50 @@
-<head>
-  <title>Doars</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<section id="sidebar">
-  <div class="inner">
-    <nav>
-      <ul>
-        <li><a href="index.html">Menu</a></li>
-        <li><a href="index.html">Cadastros</a> </li>
-        <li><a href="index.html">Cadastroinst</a> </li>
-      </ul>
+<header>
+    <nav class="nav-bar">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+
+        <!-- Menu de Navegação -->
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+        </div>
+
+        <!-- Botões de Login e Dropdown -->
+        <div class="nav-buttons">
+            <div class="dropdown">
+                <button (click)="toggleDropdown()" class="dropbtn">Selecionar Tipo</button>
+                <div id="myDropdown" class="dropdown-content" [class.show]="isDropdownOpen">
+                    <a href="#beneficiario">Doador</a>
+                    <a href="#Contribuinte">Instituição</a>
+                </div>
+            </div>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+
+        <!-- Ícone do Menu Mobile -->
+        <div class="mobile-menu-icon">
+            <button (click)="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt="Menu"></button>
+        </div>
     </nav>
-  </div>
-</section>
-<section id="Home page" class="wrapper style1 fullscreen fade-up">
-  <div class="inner">
-       <h1>Doars</h1>
-    <p>Nosso projeto apoia instituições de caridade do Rio Grande do Sul, facilitando doações e promovendo ações solidárias para quem mais precisa.</p>
-    <ul class = "actions">
-      <li><a  href="index.html">Saiba mais</a> </li>
-    </ul>
-  </div>
-</section>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="login-button">
+            <button><a href="#">Entrar</a></button>
+        </div>
+    </div>
+</header>
