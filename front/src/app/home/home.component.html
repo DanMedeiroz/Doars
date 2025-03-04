@@ -1,50 +1,31 @@
-<header>
-    <nav class="nav-bar">
-        <!-- Logo -->
-        <div class="logo">
-            <h1>Logo</h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doars</title>
+        <link rel="stylesheet" href="home.component.css">
+    </head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Doars</h1>
+            </div>
 
-        <!-- Menu de Navegação -->
-        <div class="nav-list">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-            </ul>
-        </div>
-
-        <!-- Botões de Login e Dropdown -->
-        <div class="nav-buttons">
-            <div class="dropdown">
-                <button (click)="toggleDropdown()" class="dropbtn">Selecionar Tipo</button>
-                <div id="myDropdown" class="dropdown-content" [class.show]="isDropdownOpen">
-                    <a href="#beneficiario">Doador</a>
-                    <a href="#Contribuinte">Instituição</a>
-                </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projeto</a></li>
+                </ul>
             </div>
 
             <div class="login-button">
                 <button><a href="#">Entrar</a></button>
+                <button><a href="#">Cadastrar</a></button>
             </div>
-        </div>
-
-        <!-- Ícone do Menu Mobile -->
-        <div class="mobile-menu-icon">
-            <button (click)="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt="Menu"></button>
-        </div>
-    </nav>
-
-    <!-- Menu Mobile -->
-    <div class="mobile-menu" [class.open]="isMobileMenuOpen">
-        <ul>
-            <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-        </ul>
-
-        <div class="login-button">
-            <button><a href="#">Entrar</a></button>
-        </div>
-    </div>
-</header>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,107 +1,69 @@
-/* Estilos para a barra de navegação */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+header {
+  font-family: 'Inter', sans-serif;
+  background-color: #038C8C;
+  box-shadow: 0px 1px 1px #03A696;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-header{
-  background-color: #0187a7
-
+  align-items: center; 
+  padding: 1.5rem 6rem;
 }
 
-/* Estilos para a lista de navegação */
-.nav-list {
-  display: flex;
-  gap: 20px;
-  align-self: center;
-}
-
-/* Estilos para os botões de Login e Dropdown */
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Espaço entre os elementos */
-}
-.nav-list ul{
-  display: flex;
-  gap: 20px;
-  align-self: center;
-  list-style: none;
-}
 .nav-link {
-  color: #f1f1f1;
-  font-size: 1.15rem;
-  text-decoration:none;
+  color: #ffffff; 
+  text-decoration: none; 
+  padding: 8px 16px; 
+  border-radius: 10px; 
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: aliceblue;
+  font-size:larger;
 }
 
-/* Estilos para o botão do dropdown */
-.dropbtn {
-  padding: 5px 10px;
-  cursor: pointer;
+.nav-list ul {
+  display: flex; 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  gap: 20px; 
 }
-
-/* Estilos para o conteúdo do dropdown */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+.login-button button a {
+  color: white;
   text-decoration: none;
-  display: block;
 }
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.nav-item {
+  margin: 0 15px;
 }
-
-/* Mostrar o dropdown quando a classe show está presente */
-.dropdown-content.show {
-  display: block;
-}
-
-/* Estilos para o botão de Entrar */
 .login-button button {
-  border: none;
-  padding: 5px 15px;
-  background-color: #ffffff;
-  cursor: pointer;
-
+  background-color: #F28705; 
+  color: white; 
+  border: 1px solid #000000; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  margin: 0 15px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
-.login-button button a{
-  text-decoration: none;
-  color: #000000;
-  font-weight: 500;
+.login-button button:hover{
+  background-color: #025159; 
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
-
-/* Estilos para o menu móvel */
-.mobile-menu {
-  display: none;
-}
-
-.mobile-menu.open {
-  display: block;
+.login-button button:active {
+  background-color: #013b42; 
+  transform: scale(0.95); 
 }
 
-/* Estilos para o ícone do menu móvel */
-.mobile-menu-icon {
-  display: none;
+.nav-link:hover {
+  color: #025159;
 }
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  .nav-list, .nav-buttons {
-      display: none;
-  }
-
-  .mobile-menu-icon {
-      display: block;
-  }
+.nav-link:active{
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3); 
+  transform: scale(0.95); 
 }
