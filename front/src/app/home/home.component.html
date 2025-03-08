@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Doars</title>
-        <link rel="stylesheet" href="home.component.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doars</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
 <body>
     <header>
         <nav class="nav-bar">
             <div class="logo">
                 <h1>Doars</h1>
             </div>
-
             <div class="nav-list">
                 <ul>
                     <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
@@ -20,12 +19,39 @@
                     <li class="nav-item"><a href="#" class="nav-link">Projeto</a></li>
                 </ul>
             </div>
-
             <div class="login-button">
                 <button><a href="#">Entrar</a></button>
-                <button><a href="#">Cadastrar</a></button>
+                <button><a href="/contribuinte">Cadastro</a></button>
             </div>
         </nav>
     </header>
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" checked>
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <div class="slide first">
+                    <img src="https://www.boredpanda.com/blog/wp-content/uploads/2019/11/drawing-duck-people-art-57-5dd52eecbdcc7__700.jpg" alt="Imagem 1">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/769px-Cat03.jpg" alt="Imagem 2">
+                </div>
+                <div class="slide">
+                    <img src="https://www.boredpanda.com/blog/wp-content/uploads/2019/11/drawing-duck-people-art-57-5dd52eecbdcc7__700.jpg" alt="Imagem 3">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/769px-Cat03.jpg" alt="Imagem 4">
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

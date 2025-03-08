@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh; /* Faz o body ocupar toda a altura da tela */
+    background-color: #038C8C;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+.box{
+    width: 500px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border: 2px solid #03A696; /* Adiciona uma borda preta */
+    border-radius: 10px; /* Garante cantos retos */
+    
+}
+.login-button button {
+    background-color: #F28705;
+    color: white;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 400px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.login-button button:hover {
+    background-color: #025159;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-button button:active {
+    background-color: #013b42;
+    transform: scale(0.95);
+}
+
+.login-button button a {
+    color: white;
+    text-decoration: none;
+}
+.input-box {
+    transform: translateX(20px);
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 0.5rem);
+    margin-bottom: 1.2rem;
+}
+.input-box input {
+    justify-content: left; /* Centraliza horizontalmente */
+    align-items: left; /* Centraliza verticalmente */
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    width: 100%;
+    font-size: 1rem; /* Tamanho de fonte ajustado */
+}
+
+
+

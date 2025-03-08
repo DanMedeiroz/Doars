@@ -31,4 +31,8 @@ public class Tabela_Beneficiarios {
     @Column (name = "telefone")
     private int telefone;
 
+    @Column (name = "senha")
+    private String senha;
+
+
 }

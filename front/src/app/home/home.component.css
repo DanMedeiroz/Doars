@@ -1,69 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+/* Estilos gerais do header */
 header {
   font-family: 'Inter', sans-serif;
   background-color: #038C8C;
   box-shadow: 0px 1px 1px #03A696;
 }
 
+/* Barra de navegação */
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 1.5rem 6rem;
 }
 
+/* Links de navegação */
 .nav-link {
-  color: #ffffff; 
-  text-decoration: none; 
-  padding: 8px 16px; 
-  border-radius: 10px; 
-  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-.logo {
-  font-family: 'Playfair Display', serif;
-  color: aliceblue;
-  font-size:larger;
-}
-
-.nav-list ul {
-  display: flex; 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  gap: 20px; 
-}
-.login-button button a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-}
-.nav-item {
-  margin: 0 15px;
-}
-.login-button button {
-  background-color: #F28705; 
-  color: white; 
-  border: 1px solid #000000; 
-  border-radius: 10px; 
-  padding: 10px 20px; 
-  cursor: pointer; 
-  margin: 0 15px;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
-}
-.login-button button:hover{
-  background-color: #025159; 
-  transform: scale(1.05); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-.login-button button:active {
-  background-color: #013b42; 
-  transform: scale(0.95); 
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .nav-link:hover {
   color: #025159;
 }
-.nav-link:active{
+
+.nav-link:active {
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3); 
-  transform: scale(0.95); 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+}
+
+/* Logo */
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: aliceblue;
+  font-size: larger;
+}
+
+/* Lista de navegação */
+.nav-list ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+/* Botão de login */
+.login-button button {
+  background-color: #F28705;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.login-button button:hover {
+  background-color: #025159;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-button button:active {
+  background-color: #013b42;
+  transform: scale(0.95);
+}
+
+.login-button button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Slider */
+.slider {
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img {
+  width: 800px;
+}
+
+/* Navegação manual do slider */
+.manual-navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #000000;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #ffffff;
+}
+
+/* Navegação automática do slider */
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div {
+  border: 2px solid #F28705;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* Estilos para os botões de rádio */
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -55%;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #ffffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #ffffff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #ffffff;
 }

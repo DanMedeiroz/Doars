@@ -13,4 +13,5 @@ public class Dto_Beneficiario {
     private String cnpj;
     private String adress;
     private int telefone;
+    private String senha;
 
