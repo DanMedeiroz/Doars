@@ -1,38 +1,65 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  isDropdownOpen = false;
-  isMobileMenuOpen = false;
+export class HomeComponent implements OnInit {
 
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
+  constructor(private renderer: Renderer2) { }
+
+  ngOnInit(): void {
+    this.initializeSlider();
   }
 
-  menuShow() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
-  }
+  initializeSlider(): void {
+    const slider = document.querySelectorAll('.slider') as NodeListOf<HTMLElement>;
+    const btnPrev = document.getElementById('prev-button');
+    const btnNext = document.getElementById('next-button');
 
-  // Fechar o dropdown se o usuário clicar fora dele
-  onWindowClick(event: MouseEvent) {
-    if (!(event.target as HTMLElement).matches('.dropbtn')) {
-      this.isDropdownOpen = false;
+    let currentSlide = 0;
+
+    const hideSlider = () => {
+      slider.forEach(item => item.classList.remove('on'));
+    };
+
+    const showSlider = () => {
+      if (slider.length > 0) {
+        slider[currentSlide].classList.add('on');
+      }
+    };
+
+    const nextSlider = () => {
+      hideSlider();
+      if (currentSlide === slider.length - 1) {
+        currentSlide = 0;
+      } else {
+        currentSlide++;
+      }
+      showSlider();
+    };
+
+    const prevSlider = () => {
+      hideSlider();
+      if (currentSlide === 0) {
+        currentSlide = slider.length - 1;
+      } else {
+        currentSlide--;
+      }
+      showSlider();
+    };
+
+    // Usando Renderer2 para garantir a manipulação do DOM dentro do Angular
+    if (btnNext) {
+      this.renderer.listen(btnNext, 'click', nextSlider);
     }
-  }
 
-  constructor() {
-    // Adiciona um listener para o evento de clique na janela
-    window.addEventListener('click', this.onWindowClick.bind(this));
-  }
+    if (btnPrev) {
+      this.renderer.listen(btnPrev, 'click', prevSlider);
+    }
 
-  ngOnDestroy() {
-    // Remove o listener quando o componente é destruído
-    window.removeEventListener('click', this.onWindowClick.bind(this));
+    // Inicializa o slider ao carregar a página
+    showSlider();
   }
 }

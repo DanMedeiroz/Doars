@@ -20,38 +20,23 @@
                 </ul>
             </div>
             <div class="login-button">
-                <button><a href="#">Entrar</a></button>
-                <button><a href="/contribuinte">Cadastro</a></button>
+                <a href="#"><button>Entrar</button></a>
+                <a href="/contribuinte"><button>Cadastro</button></a>
             </div>
         </nav>
     </header>
+    
     <main>
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1" checked>
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <div class="slide first">
-                    <img src="https://www.boredpanda.com/blog/wp-content/uploads/2019/11/drawing-duck-people-art-57-5dd52eecbdcc7__700.jpg" alt="Imagem 1">
-                </div>
-                <div class="slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/769px-Cat03.jpg" alt="Imagem 2">
-                </div>
-                <div class="slide">
-                    <img src="https://www.boredpanda.com/blog/wp-content/uploads/2019/11/drawing-duck-people-art-57-5dd52eecbdcc7__700.jpg" alt="Imagem 3">
-                </div>
-                <div class="slide">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/769px-Cat03.jpg" alt="Imagem 4">
-                </div>
+        <div class="container-slider">
+            <button id="prev-button"><img src="assets/imagens/arrow.png" alt="prev-button"></button>
+            <div class="container-images">
+                <img src="assets/imagens/Banner1.png" alt="girl" class="slider on">
+                <img src="assets/imagens/Banner2.png" alt="girl" class="slider">
+                <img src="assets/imagens/Banner3.png" alt="girl" class="slider">
             </div>
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
+            <button id="next-button"><img src="assets/imagens/arrow2.png" alt="next-button"></button>
         </div>
     </main>
+
 </body>
 </html>

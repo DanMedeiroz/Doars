@@ -22,14 +22,11 @@ public class Tabela_Beneficiarios {
     @Column(name = "nome")
     private String nome;
 
-    @Column (name = "Cnpj")
-    private String cnpj;
-
     @Column (name = "adress")
     private String adress;
 
     @Column (name = "telefone")
-    private int telefone;
+    private String telefone;
 
     @Column (name = "senha")
     private String senha;

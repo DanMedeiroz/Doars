@@ -6,7 +6,9 @@ header {
   background-color: #038C8C;
   box-shadow: 0px 1px 1px #03A696;
 }
-
+body{
+  background-color: #03A696;
+}
 /* Barra de navegação */
 .nav-bar {
   display: flex;
@@ -81,101 +83,84 @@ header {
   color: white;
   text-decoration: none;
 }
-
-/* Slider */
-.slider {
-  margin: 0 auto;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
+/* Resetando margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.slides {
-  width: 400%;
-  height: 400px;
+.container-slider {
   display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -80px;
 }
 
-.slides input {
-  display: none;
-}
-
-.slide {
-  width: 25%;
+.container-images {
   position: relative;
-}
-
-.slide img {
-  width: 800px;
-}
-
-/* Navegação manual do slider */
-.manual-navigation {
-  position: absolute;
-  width: 800px;
-  margin-top: -40px;
   display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid #000000;
-  padding: 5px;
+  width: 1200px;
+  height: 675px; /* Defina uma altura para as imagens */
+  overflow: hidden; /* Garante que as imagens não saiam da área do slider */
+  border: 2px solid #000;
   border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
+  
+  padding: 50px;
 }
 
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
-  background-color: #ffffff;
-}
-
-/* Navegação automática do slider */
-.navigation-auto {
+.slider {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Mais suave para transições */
   position: absolute;
-  width: 800px;
-  margin-top: 360px;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div {
-  border: 2px solid #F28705;
-  padding: 5px;
+  width: 100%;
+  height: 100%; /* Garante que as imagens ocupem toda a área */
+  object-fit: cover; /* Garante que a imagem cubra a área do container */
   border-radius: 10px;
+}
+
+.on {
+  opacity: 1;
+}
+
+#prev-button, #next-button {
+  width: 50px; /* Tamanho do botão aumentado para um visual mais chamativo */
+  height: 50px; /* Tamanho do botão aumentado */
+  border-radius: 50%; /* Botões circulares */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+  border: 2px solid #fff; /* Borda branca para destacar */
   cursor: pointer;
-  transition: 1s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease; /* Transição suave para os efeitos de hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito de profundidade */
 }
 
-.navigation-auto div:not(:last-child) {
-  margin-right: 40px;
+#prev-button:hover, #next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo mais escura ao passar o mouse */
+  border-color: #F28705; /* Borda amarela para destaque ao passar o mouse */
+  transform: translateY(-50%) scale(1.1); /* Aumenta o botão ao passar o mouse */
 }
 
-/* Estilos para os botões de rádio */
-#radio1:checked ~ .first {
-  margin-left: 0;
+#prev-button img, #next-button img {
+  width: 20px; /* Ajuste do tamanho da imagem dentro do botão */
+  height: 20px;
+  filter: brightness(0) invert(1); /* Deixa a imagem branca para contraste */
 }
 
-#radio2:checked ~ .first {
-  margin-left: -25%;
+#prev-button {
+  left: 20px; /* Distância à esquerda para o botão anterior */
 }
 
-#radio3:checked ~ .first {
-  margin-left: -55%;
+#next-button {
+  right: 20px; /* Distância à direita para o botão próximo */
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: #ffffff;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: #ffffff;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: #ffffff;
-}

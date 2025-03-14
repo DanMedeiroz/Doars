@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Dto_Beneficiario {
-    private long id;
+    private Long id;
     private String nome;
-    private String cnpj;
-    private String adress;
-    private int telefone;
+    private String address;
+    private String telefone;
     private String senha;
+}
 
